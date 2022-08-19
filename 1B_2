@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Write a program in C which is a Menu-Driven Program to compute the area of the various geometrical shape.
+//If the user enters 1, ask the user for radius and calculate the area of a circle.
+//If the user enters 2, ask the user to enter length and breadth of the rectangle, then calculate the area of the rectangle.
+//If the user enters 3, ask the user to enter the base and height and calculate the area of the triangle.
+int main()
+{
+    int number, length, breadth, radius, base, height;
+    float area;
+    printf("Enter the numbers 1, 2, or 3(Enter 1 for the area of the circle, 2 for the area of a rectangle, and 3 for the area of the triangle):");
+    scanf("%d", &number);
+    switch(number)
+    {
+    case 1:
+         printf("Enter the radius of the circle(Pi is 3.14 in this case):");
+         scanf("%d", &radius);
+         area=3.14*radius*radius;
+         printf("The area of the circle is %.2f.", area);
+         break;
+    case 2:
+         printf("Enter the length:");
+         scanf("%d", &length);
+         printf("Enter the width:");
+         scanf("%d", &breadth);
+         area=length*breadth;
+         printf("The area of the rectangle is %.f.", area);
+         break;
+    case 3:
+         printf("Enter the base:");
+         scanf("%d", &base);
+         printf("Enter the height:");
+         scanf("%d", &height);
+         area=0.5*base*height;
+         printf("The area of the triangle is %.f.", area);
+         break;
+    default:
+         printf("Please enter 1, 2, or 3.");
+   }
+}
